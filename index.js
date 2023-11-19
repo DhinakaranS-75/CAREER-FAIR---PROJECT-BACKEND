@@ -11,10 +11,6 @@ app.use(express.json());
 app.use(cors({ origin: "*" }));
 connectDb();
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
 app.use("/signin", signinRouter);
 app.use("/login", loginRouter);
 app.use("/home", homeRouter);
